@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Hofvidz.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hofvidz.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

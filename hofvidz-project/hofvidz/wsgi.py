@@ -1,5 +1,5 @@
 """
-WSGI config for Hofvidz project.
+WSGI config for hofvidz project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Hofvidz.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hofvidz.settings')
 
 application = get_wsgi_application()
