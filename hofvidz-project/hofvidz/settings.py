@@ -25,6 +25,10 @@ SECRET_KEY = '8%_gop=4bz2xg5dd17k-gj9b(&r6s=xgk93oy&om2o68p%iv7m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
 ALLOWED_HOSTS = []
 
 
