@@ -6,7 +6,6 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Hall, Video
 from .forms import VideoForm, SearchForm
 
-# Create your views here.
 def home(request):
     return render(request, 'halls/home.html')
 
