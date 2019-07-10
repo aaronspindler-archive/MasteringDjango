@@ -5,11 +5,12 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from .models import Hall, Video
 from .forms import VideoForm, SearchForm
-from django.http import Http404
+from django.http import Http404, JsonResponse
 from django.forms.utils import ErrorList
 
 import urllib
 import requests
+
 
 #Restricted API Key
 #Don't bother trying to use it
@@ -51,6 +52,9 @@ def add_video(request, pk):
                 errors.append('Needs to be a YouTube URL')
 
     return render(request, 'halls/add_video.html', {'form': form, 'search_form':search_form, 'hall':hall})
+
+def video_search(request):
+    return JsonResponse({'hello':'hello'})
 
 class SignUp(generic.CreateView):
     form_class = UserCreationForm
