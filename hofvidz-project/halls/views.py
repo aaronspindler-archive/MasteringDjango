@@ -22,6 +22,11 @@ def home(request):
 def dashboard(request):
     return render(request, 'halls/dashboard.html')
 
+class DeleteVideo(generic.DeleteView):
+    model = Video
+    template_name = 'halls/delete_video.html'
+    success_url = reverse_lazy('dashboard')
+
 def add_video(request, pk):
     form = VideoForm()
     search_form = SearchForm()
